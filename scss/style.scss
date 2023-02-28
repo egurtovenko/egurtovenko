@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Russo+One&display=swap');
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background: url(../img/bg7.png) no-repeat center;
+  background-size: cover;
+  &:before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-top: 10px dashed #fff;
+      border-left: 10px dashed #ff8900;
+      top: 0;
+      left: 0;
+      margin: 15px 0 0 15px;
+      z-index: 1;
+    }
+  
+    &:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: 0;
+      right: 0;
+      border-bottom: 10px dashed #fff;
+      border-right: 10px dashed #ff8900;
+      margin: 0 15px 15px 0;
+    }
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__name {
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: #ff8900;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+  }
+  &__social {
+    display: flex;
+    gap: 0 30px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: .6s ease-out;
+      i {
+        font-size: 23px;
+      }
+      &:hover {
+        color: #ff8900;
+      }
+    }
+  }
+}
+
+a.header__btn{
+  align-self: center;
+}
+
+
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  &__photo {
+    width: 300px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__text {
+    max-width: 550px;
+    p {
+      font-size: 23px;
+    }
+  }
+}
+
+.title {
+  font-family: 'Russo One', sans-serif;
+  font-size: 33px;
+  letter-spacing: 2.2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.orange {
+  color: #ff8900;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn {
+  background: #ff8900;
+  font-size: 16px;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 7px 25px;
+  transition: .6s ease-out;
+  cursor: pointer;
+  min-width: 150px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.67);
+    color: #3b434c;
+    
+  }
+}
+
+@media (max-width: 1080px) {
+  body {
+    &:before,
+    &:after {
+     display: none;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .title {
+    font-size: 35px;
+  }
+  .about {
+    gap: 0 50px;
+  }
+  .about__photo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 820px) {
+  .about {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__name {
+    font-size: 25px;
+  }
+    .header__social a {
+      font-size: 18px;
+    }
+  .about__text p {
+    font-size: 18px;
+  }
+}
